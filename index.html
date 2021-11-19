@@ -1,0 +1,97 @@
+<html manifest="Cache.manifest">
+
+<head>
+    <meta charset="utf-8" />
+    <title>PS4 7.02 Jailbreak  / Host by Chronoss</title>
+    <link rel="shortcut icon" href="favicon.ico"></link>
+
+<style>
+	.bg {
+	  background-image:url(back.png);
+	  background-color:#000000;
+	  color:white;
+	  background-attachment: fixed;
+	  background-size:100%;
+	  background-repeat:no-repeat;
+	}
+</style>
+
+</head>   
+<body class="bg">
+<script>
+window.applicationCache.ondownloading = function()
+{
+	alert("Caching started !!!")
+};
+
+window.applicationCache.onprogress = function(a)
+{
+	document.getElementById("progress").innerHTML="<h3>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>";
+};
+
+window.applicationCache.oncached = window.applicationCache.onupdateready = function()
+{
+	alert("✔ Page Cached ✔")
+};
+</script>
+<div style="background-color:#000024;color:white;font-size:20px;text-align:center;">
+<h1 style='font-size:40px;margin:0;text-shadow: 4px 4px 4px #f3c108'> SLEIRSGOEVY 7.02 HOST </h1><i>
+<h3 style='font-size:26px;margin:0;text-shadow: 4px 4px 4px #de0029'>Last update file published by Sleirsgoevy for 7.02 PS4</h3>
+<hr>
+</div>
+    <div id="english" class="language" style="display: block">
+        <h3 style="color:red;text-align:center;">READ THIS CAREFULLY BEFORE PROCEEDING</h3>
+        <p><b>In case you're dumb: this ONLY works on FW 7.02. If you are on 6.72, go
+                <a href="https://chronoss09.github.io/sleirsgoevy672.html">here</a>. If you
+                are on 7.55, go <a href="https://chronoss09.github.io/sleirsgoevy755.html">here</a>.
+                <font color="red">If you are on a higher firmware (e.g. 9.00), you can test the Webkit from
+				<a href="Webkit_9.0/index.html">here</a></font>.</b></p>
+        <ol>
+            <li>Click on <b>MIRA</b>, <b>HEN</b> or <b>GOLDHEN</b>, depending on your personal habits. In about 20 seconds you'll get an
+                alert saying <b>"You're all set!"</b>, followed by <b>"There is not enough free system memory"</b>. This means that everything
+                has gone well. Note: if using Mira, the screen will go dark for a dozen of seconds.<br />
+                If something went wrong during the process, you may get an alert saying "Jailbreak failed! Reboot your
+                PS4 and try again.". In this case you must reboot your PS4, preferrably without closing the dialog
+                box.<br />
+                If the system hangs for more than a minute (may require more time on slow Internet connections), reboot
+                your PS4 and try again.<br />
+                If the system crashes (looks like instant powerdown), press the power button on the PS4 (NOT on the
+                gamepad) until it turns on again, then retry.
+            </li>
+            <li><font color="yellow">If you get a <b>"There is not enough free system memory"</b> message without any pop-ups, then it means that the webkit
+                exploit has failed. <b>Click OK and retry</b></font>.</li>
+            <li><b>For advanced users:</b> To load your own payloads using <b>NetCat</b>, run <b>NETCAT</b> and send the
+                payload to <b>TCP port 9021 (9020 for the legacy version)</b>.</li>
+        </ol>
+        <center><b><p><i>Credits: Synacktiv team for the WebKit exploit, @theflow for the kernel exploit, @ChendoChap for HEN, &lt;anonymous&gt; for 7.02 module dumps, @tihmstar for 7.02 offsets in the Linux loader</i></p></b>
+    </div>
+
+<div style="background-color:#000024;border-radius:20px;position:fixed;left:150;bottom:251px;width:80%;text-align:center;">
+<a href="payload.html#f=mira/mira2.js"><img src="images/mira.png"></a>
+<a href="payload.html#f=hen.js"><img src="images/hen.png"></a>
+<a href="payload.html#f=goldhen.js"><img src="images/gold.png"></a>
+<a href="payload.html#f=linux_1gb.js"><img src="images/linux_1.png"></a>
+<a href="payload.html#f=linux_3g.js"><img src="images/linux_3.png"></a>
+<a href="netcat.html"><img src="images/netcat.png"></a>
+<a href="payload.html"><img src="images/netcatl.png"></a>
+
+<div style="position:fixed;left:0;bottom:168px;width:100%;text-align:center;color:white;font-size:40px;"> <span id=passCounter></span> &nbsp; : &nbsp; <span id=failCounter></span></div>
+
+	<div style="background-color:#ff0000;border-radius:50px;position:fixed;left:387;bottom:51px;width:50%;text-align:center;color:white;">
+        <p><b><i>This exploit does many crash and hang. Sometimes you even have to retry 10 times to get the jailbreak.
+		This error is not going to harm your console.
+		<br>Success rate here is about 10%, so don't worry and continue...</i></b></p>
+    </div>
+
+<div style="background-color:#000024;color:white;position:fixed;left:0;bottom:-15px;width:100%;text-align:center;">
+<i><font id="progress" style='font-size:16px;margin:0;text-shadow: 4px 4px 4px #de0029'>SLEIRSGOEVY PS4EXPLOIT HOST 7.02 BY CHRONOSS</i></font></p>
+</div>
+<script>
+if (localStorage.passcount == null) localStorage.passcount=0;
+window.passCounter.innerHTML=localStorage.passcount;
+if (localStorage.failcount == null) localStorage.failcount=0;
+window.failCounter.innerHTML=localStorage.failcount;
+</script>
+</body>
+
+</html>

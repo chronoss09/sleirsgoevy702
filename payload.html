@@ -1,0 +1,69 @@
+<html>
+<body style="text-align:center;" onload="go()">
+<script>
+if(document.cookie.indexOf('kex=0') >= 0)
+    document.location.href = 'index.html';
+</script>
+<script>
+function print(){}
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done()
+{
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("✔ You're all set ✔");
+        read_ptr_at(0);
+    }
+    else
+        alert("Jailbreak failed! Reboot your PS4 and try again.");
+}
+
+window.midExploit = function()
+{
+    if(document.location.hash)
+    {
+        var s = decodeURIComponent(document.location.hash.substr(3));
+        preloadScripts(['702.js', 'jb.js', 'mira/mira.js', s, 'mira/c-code.js'], go);
+    }
+    else
+        preloadScripts(['702.js', 'jb.js', 'mira/mira.js', 'mira/c-code.js'], go);
+}
+
+window.postExploit = function()
+{
+    document.cookie = 'kex=0';
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
+</script>
+<script src="webkit/utils.js"></script>
+<script src="webkit/int64.js"></script>
+<script src="webkit/ps4.js"></script>
+<div style="background-color:#000024;color:white;font-size:20px;text-align:center;">
+<h1 style='font-size:40px;margin:0;text-shadow: 4px 4px 4px #f3c108'> SLEIRSGOEVY 7.02 HOST </h1><i>
+<h3 style='font-size:26px;margin:0;text-shadow: 4px 4px 4px #de0029'>Last update file published by Sleirsgoevy for 7.02 PS4</h3>
+</div><br><br><br>
+<button id="input1" onfocus="handle2()"></button>
+<button id="input2"></button>
+<button id="input3" onfocus="handle2()"></button>
+<select id="select1">
+<option value="value1">Value1</option>
+</select>
+</body>
+</html>
